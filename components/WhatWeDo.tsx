@@ -8,17 +8,20 @@ const focusAreas = [
     icon: Building2,
     title: "Strata Management",
     description: "AI-powered support for body corporates and strata managers",
+    color: "bg-primary",
   },
   {
     icon: Users,
     title: "Collectives & Co-ops",
     description: "Technology infrastructure for member-owned organisations",
+    color: "bg-sky",
     link: { label: "See Acacia Collective", href: "https://acaciacollective.com.au" },
   },
   {
     icon: ArrowRight,
     title: "More Sectors Coming",
     description: "We're scaling fast",
+    color: "bg-accent",
   },
 ];
 
@@ -26,10 +29,13 @@ export default function WhatWeDo() {
   const ref = useFadeIn();
 
   return (
-    <section id="what-we-do" className="py-24 md:py-32 px-6">
-      <div ref={ref} className="max-w-5xl mx-auto fade-in-section">
+    <section id="what-we-do" className="relative py-24 md:py-32 px-6 bg-gradient-to-b from-light to-white overflow-hidden">
+      {/* Subtle background accent */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-sky/[0.06] blur-3xl" />
+
+      <div ref={ref} className="relative z-10 max-w-5xl mx-auto fade-in-section">
         <div className="text-center mb-16">
-          <p className="text-primary-light font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+          <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-3">
             What We Do
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-8">
@@ -47,10 +53,10 @@ export default function WhatWeDo() {
           {focusAreas.map((area) => (
             <div
               key={area.title}
-              className="relative flex items-start gap-4 p-6 rounded-xl border border-primary/10 hover:border-primary/25 transition-colors duration-300"
+              className="relative flex items-start gap-4 p-6 rounded-xl bg-white border border-primary/10 hover:border-primary/25 hover:shadow-md transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-lg bg-sky/15 flex items-center justify-center shrink-0">
-                <area.icon className="w-5 h-5 text-primary" strokeWidth={1.5} />
+              <div className={`w-10 h-10 rounded-lg ${area.color} flex items-center justify-center shrink-0 shadow-sm`}>
+                <area.icon className="w-5 h-5 text-white" strokeWidth={1.5} />
               </div>
               <div>
                 <h3 className="font-semibold text-navy mb-1">{area.title}</h3>

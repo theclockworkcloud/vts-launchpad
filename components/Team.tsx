@@ -16,10 +16,10 @@ export default function Team() {
   const ref = useFadeIn();
 
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section className="py-24 md:py-32 px-6 bg-gradient-to-b from-white to-light">
       <div ref={ref} className="max-w-5xl mx-auto fade-in-section">
         <div className="text-center mb-16">
-          <p className="text-primary-light font-semibold text-sm tracking-[0.2em] uppercase mb-3">
+          <p className="text-accent font-semibold text-sm tracking-[0.2em] uppercase mb-3">
             Our Team
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-navy">
@@ -33,7 +33,7 @@ export default function Team() {
               key={member.name}
               className="group flex flex-col items-center text-center w-56"
             >
-              <div className="w-28 h-28 rounded-2xl overflow-hidden mb-5 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+              <div className="w-28 h-28 rounded-2xl overflow-hidden mb-5 shadow-md ring-2 ring-primary/10 group-hover:ring-primary/25 group-hover:shadow-lg transition-all duration-300">
                 {member.image ? (
                   <Image
                     src={member.image}
@@ -43,7 +43,7 @@ export default function Team() {
                     className="w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-primary/10 to-sky/15 flex items-center justify-center">
+                  <div className="w-full h-full bg-gradient-to-br from-primary/20 to-sky/30 flex items-center justify-center">
                     <User
                       className="w-12 h-12 text-primary/50"
                       strokeWidth={1}

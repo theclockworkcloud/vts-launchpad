@@ -5,6 +5,7 @@
   --color-primary-light: #4A9BD9;
   --color-sky: #7BC4E8;
   --color-accent: #F5A623;
+  --color-accent-warm: #F7B84E;
   --color-navy: #1A2B4C;
   --color-light: #F8F9FA;
 
@@ -38,14 +39,3 @@ html {
 .stagger-children.is-visible > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
 .stagger-children.is-visible > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
 .stagger-children.is-visible > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
-
-/* Geometric decorative pattern */
-.geo-pattern {
-  background-image:
-    linear-gradient(135deg, rgba(30, 90, 153, 0.03) 25%, transparent 25%),
-    linear-gradient(225deg, rgba(30, 90, 153, 0.03) 25%, transparent 25%),
-    linear-gradient(315deg, rgba(30, 90, 153, 0.03) 25%, transparent 25%),
-    linear-gradient(45deg, rgba(30, 90, 153, 0.03) 25%, transparent 25%);
-  background-size: 60px 60px;
-  background-position: 0 0, 0 30px, 30px -30px, 30px 0px;
-}
