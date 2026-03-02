@@ -33,7 +33,7 @@ export default function Hero() {
             alt="Veritable Technology Solutions"
             width={200}
             height={200}
-            className="w-40 md:w-52"
+            className="w-40 md:w-52 mix-blend-multiply"
             priority
           />
         </div>
