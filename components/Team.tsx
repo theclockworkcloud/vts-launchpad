@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { User } from "lucide-react";
 import { useFadeIn } from "./useFadeIn";
 
@@ -7,6 +8,7 @@ const team = [
   {
     name: "Alex Hender",
     role: "Executive General Manager",
+    image: "/alex-headshot.png",
   },
 ];
 
@@ -31,11 +33,23 @@ export default function Team() {
               key={member.name}
               className="group flex flex-col items-center text-center w-56"
             >
-              <div className="w-28 h-28 rounded-2xl bg-gradient-to-br from-primary/10 to-sky/15 flex items-center justify-center mb-5 group-hover:from-primary/15 group-hover:to-sky/20 transition-all duration-300">
-                <User
-                  className="w-12 h-12 text-primary/50"
-                  strokeWidth={1}
-                />
+              <div className="w-28 h-28 rounded-2xl overflow-hidden mb-5 shadow-sm group-hover:shadow-md transition-shadow duration-300">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={112}
+                    height={112}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-primary/10 to-sky/15 flex items-center justify-center">
+                    <User
+                      className="w-12 h-12 text-primary/50"
+                      strokeWidth={1}
+                    />
+                  </div>
+                )}
               </div>
               <h3 className="font-semibold text-navy text-lg">
                 {member.name}
