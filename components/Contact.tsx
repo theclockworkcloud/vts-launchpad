@@ -33,7 +33,7 @@ export default function Contact() {
         </p>
 
         <a
-          href="mailto:hello@veritabletech.com.au"
+          href="mailto:hello@veritabletechnologysolutions.com.au"
           className="inline-flex items-center px-8 py-3.5 bg-accent text-white font-semibold rounded-lg shadow-lg shadow-accent/25 hover:shadow-accent/40 hover:scale-[1.02] transition-all duration-200 mb-10"
         >
           Start a Conversation
@@ -42,7 +42,7 @@ export default function Contact() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-navy/50 text-sm font-light">
           <div className="flex items-center gap-2">
             <Mail className="w-4 h-4" strokeWidth={1.5} />
-            <span>hello@veritabletech.com.au</span>
+            <span>hello@veritabletechnologysolutions.com.au</span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4" strokeWidth={1.5} />
