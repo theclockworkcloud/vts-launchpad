@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, Users, ArrowRight } from "lucide-react";
+import { Building2, Users, ArrowRight, ExternalLink } from "lucide-react";
 import { useFadeIn } from "./useFadeIn";
 
 const focusAreas = [
@@ -13,6 +13,7 @@ const focusAreas = [
     icon: Users,
     title: "Collectives & Co-ops",
     description: "Technology infrastructure for member-owned organisations",
+    link: { label: "See Acacia Collective", href: "https://acaciacollective.com.au" },
   },
   {
     icon: ArrowRight,
@@ -56,6 +57,17 @@ export default function WhatWeDo() {
                 <p className="text-sm text-navy/55 font-light">
                   {area.description}
                 </p>
+                {"link" in area && area.link && (
+                  <a
+                    href={area.link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 mt-2 text-xs font-medium text-primary hover:text-primary-light transition-colors duration-200"
+                  >
+                    {area.link.label}
+                    <ExternalLink className="w-3 h-3" strokeWidth={1.5} />
+                  </a>
+                )}
               </div>
             </div>
           ))}
