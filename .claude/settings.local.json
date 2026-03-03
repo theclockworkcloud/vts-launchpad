@@ -7,7 +7,15 @@
       "Bash(npm install:*)",
       "Bash(mkdir:*)",
       "Bash(npm run:*)",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(gh repo:*)",
+      "WebSearch",
+      "Bash(xargs basename:*)",
+      "WebFetch(domain:developer.simprogroup.com)",
+      "WebFetch(domain:apiforum.simprogroup.com)",
+      "WebFetch(domain:api.simpro.co)",
+      "WebFetch(domain:helpguide.simprogroup.com)",
+      "Bash(npx tsc:*)"
     ]
   }
 }
